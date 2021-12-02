@@ -1,0 +1,24 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--进度条-->
+    <declare-styleable name="DayProgressView">
+        <attr name="rectRadius" format="dimension"/>
+        <attr name="leftColor" format="color"/>
+        <attr name="rightColor" format="color"/>
+        <attr name="defaultColor" format="color"/>
+    </declare-styleable>
+
+    <!--进度条上方textview-->
+    <declare-styleable name="TextProgressView">
+        <attr name="textColor" format="color"/>
+        <attr name="numColor" format="color"/>
+    </declare-styleable>
+</resources>

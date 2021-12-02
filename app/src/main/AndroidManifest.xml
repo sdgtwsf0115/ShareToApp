@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.wsf.myprogressbar">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".TestActivity">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity android:name=".FileShareActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="true"
+            android:label="测试分享文件"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!--调用微信的其他应用打开列表添加自己应用  -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="content"/>
+                <!-- 允许所有类型文件-->
+                <data android:mimeType="*/*" />
+                <!-- 只允许图片文件-->
+                <!--<data android:mimeType="image/*"/>-->
+            </intent-filter>
+            <!--调用QQ的其他应用打开列表添加自己应用  -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="file"/>
+                <!-- 允许所有类型文件-->
+                <data android:mimeType="*/*" />
+                <!-- 只允许图片文件-->
+                <!--<data android:mimeType="image/*"/>-->
+            </intent-filter>
+            <!--调用分享或发送时，应用列表添加自己应用  -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- 允许所有类型文件-->
+                <data android:mimeType="*/*" />
+                <!-- 只允许图片文件-->
+                <!--<data android:mimeType="image/*"/>-->
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
