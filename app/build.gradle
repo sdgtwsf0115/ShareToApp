@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.wsf.myprogressbar"
+        applicationId "com.wsf.sharetoapp"
         minSdkVersion 15
         targetSdkVersion 17
         versionCode 1
